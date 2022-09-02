@@ -1,0 +1,10 @@
+#!/bin/bash
+program=PS21Parser.jar
+path=/opt/ids/ComdataParsers/PS21Parser/
+if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "Invalid arguments........."
+        echo "Usage : $0 -externalId <customer pid>"
+        exit 1
+fi
+cd $path
+/jdk-8/jdk1.8.0_201/bin/java -jar $program $1 $2
